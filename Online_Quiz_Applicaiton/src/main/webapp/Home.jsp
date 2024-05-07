@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="horizontal-menu">
-  <a href="#" class="active">Home</a>
+  <a href="/Home.jsp" class="active">Home</a>
   <a href="#">About</a>
   <a href="#">Help</a>
   <a href="LoginSerlvet">Sign in</a>

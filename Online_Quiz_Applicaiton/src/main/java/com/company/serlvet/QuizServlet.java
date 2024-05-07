@@ -13,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.company.DataBase.DataBaseConnection;
+import com.company.javaFile.Question;
 
 public class QuizServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -25,23 +26,24 @@ public class QuizServlet extends HttpServlet {
 			String sql="SELECT * FROM questiontable";
 			PreparedStatement preparedStatement =connection.prepareStatement(sql);
 			ResultSet resultSet= preparedStatement.executeQuery();
-			List<String> questions = new ArrayList<>();
-			List<String> answers=new ArrayList<>();
+			List<Question> quizQuestions= new ArrayList<>();
+			
 			while (resultSet.next()) {
-				String  question=resultSet.getString("Question");
-				String answer=resultSet.getString("Answer");
-				questions.add(question);
-				answers.add(answer);
+				Question question = new Question();
+				question.setQuestionText(resultSet.getString("Question"));
+				question.setOptionA(resultSet.getString("Option1"));
+				question.setOptionB(resultSet.getString("Option2"));
+				question.setOptionC(resultSet.getString("Option3"));
+				question.setOptionD(resultSet.getString("Option4"));
+				quizQuestions.add(question);
 			}
-			
-			   request.getSession().setAttribute("questions", questions);
-	            request.getSession().setAttribute("answers", answers);
-			
+		        request.getSession().setAttribute("quizQuestions",quizQuestions);
+		        response.sendRedirect("Quiz.jsp");
 			    resultSet.close();
 	            preparedStatement.close();
 	            connection.close();
 	           
-	            response.sendRedirect("Quiz.jsp");
+	            
 		} catch (Exception e) {
 			System.out.println("Error in database...");
 			e.printStackTrace();
