@@ -29,4 +29,14 @@
     <servlet-name>SubmitServlet</servlet-name>
     <url-pattern>/SubmitServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ResultServlet</display-name>
+    <servlet-name>ResultServlet</servlet-name>
+    <servlet-class>com.company.serlvet.ResultServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ResultServlet</servlet-name>
+    <url-pattern>/ResultServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

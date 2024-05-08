@@ -7,19 +7,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Quiz Questions</title>
-<link rel="stylesheet" href="Style.css">
+<link rel="stylesheet" type="text/css" href="CSSFolder/QuizStyle.css">
 </head>
 <body>
 <h1>Quiz Questions</h1>
 <div class="container">
-    <ol>
+    
         <% 
         List<Question> quizQuestions =(List<Question>)session.getAttribute("quizQuestions");
         if(quizQuestions!= null && !quizQuestions.isEmpty()){
         	for(int i=0; i<quizQuestions.size();i++){
         		Question question=quizQuestions.get(i);
         %>
-        <li>
+       
             <form action="SubmitServlet" method="post">
                 <strong>Question <%= i+1 %>:</strong> <%= question.getQuestionText() %><br>
                 <input type="radio" name="answer<%=i%>" value="<%= question.getOptionA() %>">
@@ -39,13 +39,13 @@
         <%   }%>
                   <button type="submit">Submit your answer</button>
             </form>
-              </li>
+              
                 <% 
             } else {
         %>
-        <li>No questions available.</li>
+        <p>No questions available.</p>
         <% } %>
-    </ol>
+    
 </div>
 </body>
 </html>

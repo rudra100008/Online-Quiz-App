@@ -4,9 +4,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Result</title>
 </head>
 <body>
+<% HttpSession session1=request.getSession();
+int marks=(int)session.getAttribute("Marks");
+%>
 <h1>Your all answer are correct.</h1>
+<h2>Your marks is <%= marks %></h2>
 </body>
 </html>
