@@ -1,18 +1,17 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="ISO-8859-1">
-<title>Online Quiz Game</title>
-<link rel="stylesheet" type="text/css" href="indexStyle.css">
+<title>Online Quiz </title>
+<link rel="stylesheet" type="text/css" href="CSSFolder/indexStyle.css">
 </head>
 <body>
 <div class="horizontal-menu">
-  <a href="/Home.jsp" class="active">Home</a>
+  <a href="Home.jsp" class="active">Home</a>
   <a href="#">About</a>
   <a href="#">Help</a>
-  <a href="LoginSerlvet">Sign in</a>
+  <a href="Login.jsp">Sign in</a>
 </div>
 
 

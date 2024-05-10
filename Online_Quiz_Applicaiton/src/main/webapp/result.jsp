@@ -5,6 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Result</title>
+<link rel="stylesheet" type=text/css href=CSSFolder/resultStyle.css> 
 </head>
 <body>
 <% HttpSession session1=request.getSession();

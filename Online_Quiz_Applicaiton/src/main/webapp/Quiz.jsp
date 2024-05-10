@@ -7,9 +7,19 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Quiz Questions</title>
-<link rel="stylesheet" type="text/css" href="CSSFolder/QuizStyle.css">
+<link rel="stylesheet" type="text/css" href="CSSFolder/quizStyle.css">
+<style type="text/css">
+
+</style>
 </head>
 <body>
+
+<div class="horizontal">
+  <a href="Home.jsp" >Home</a>
+  <a href="#">About</a>
+  <a href="#">Help</a>
+  <a href="LoginSerlvet">Sign in</a>
+</div>
 <h1>Quiz Questions</h1>
 <div class="container">
     
